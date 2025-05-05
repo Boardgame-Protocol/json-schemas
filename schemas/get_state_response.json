@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/get_state_response.json",
+  "type": "object",
+  "required": [
+    "version",
+    "game",
+    "match_id",
+    "phase",
+    "turn",
+    "stage",
+    "state",
+    "active_agent_id",
+    "agents",
+    "started_at"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "game": {
+      "type": "string"
+    },
+    "match_id": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "turn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stage": {
+      "type": "string"
+    },
+    "state": {
+      "type": "object",
+      "required": ["data"],
+      "properties": {
+        "data": {
+          "type": "object"
+        }
+      }
+    },
+    "active_agent_id": {
+      "type": "string"
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ended_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
