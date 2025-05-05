@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/perform_action_response.json",
+  "type": "object",
+  "required": [
+    "version",
+    "type",
+    "game",
+    "match_id",
+    "agent_id",
+    "action_response"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "type": {
+      "type": "string",
+      "const": "perform_action_response"
+    },
+    "game": {
+      "type": "string"
+    },
+    "match_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "action_response": {
+      "type": "object",
+      "required": ["version", "status", "message", "data"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["success", "error"]
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
