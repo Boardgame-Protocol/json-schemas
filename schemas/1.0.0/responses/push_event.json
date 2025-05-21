@@ -7,12 +7,7 @@
     "game",
     "match_id",
     "agent_id",
-    "turn",
-    "stage",
-    "state",
-    "active_agent_id",
-    "agents",
-    "started_at"
+    "event"
   ],
   "properties": {
     "version": {
