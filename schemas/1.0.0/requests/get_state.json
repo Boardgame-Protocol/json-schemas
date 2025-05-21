@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/1.0.0/requests/get_state.json",
+  "type": "object",
+  "required": [
+    "version",
+    "type",
+    "game",
+    "match_id",
+    "agent_id",
+    "state"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "type": {
+      "type": "string",
+      "const": "get_state"
+    },
+    "game": {
+      "type": "string"
+    },
+    "match_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "state": {
+      "type": "object",
+      "required": [
+        "version"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

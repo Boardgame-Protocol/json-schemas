@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "type": "create_match_response",
+  "game": "tictactoe",
+  "match_id": "match_123",
+  "agent_id": "agent_2"
+}

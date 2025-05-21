@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "type": "perform_action_response",
+  "game": "tictactoe",
+  "match_id": "match_123",
+  "agent_id": "agent_1",
+  "action_response": {
+    "version": "1.0.0",
+    "status": "success",
+    "message": "Message",
+    "data": {}
+  }
+}

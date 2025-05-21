@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/get_state.json",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/1.0.0/responses/create_match.json",
+  "title": "Create Match Response",
   "type": "object",
   "required": [
     "version",
     "type",
     "game",
     "match_id",
-    "agent_id",
-    "state"
+    "agent_id"
   ],
   "properties": {
     "version": {
@@ -17,7 +17,7 @@
     },
     "type": {
       "type": "string",
-      "const": "get_state"
+      "const": "create_match_response"
     },
     "game": {
       "type": "string"
@@ -27,17 +27,6 @@
     },
     "agent_id": {
       "type": "string"
-    },
-    "state": {
-      "type": "object",
-      "required": ["version"],
-      "properties": {
-        "version": {
-          "type": "string",
-          "pattern": "^\\d+\\.\\d+\\.\\d+$"
-        }
-      },
-      "additionalProperties": false
     }
   },
   "additionalProperties": false

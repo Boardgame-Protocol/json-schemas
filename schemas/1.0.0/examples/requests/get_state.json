@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "type": "get_state",
+  "game": "tictactoe",
+  "match_id": "match_123",
+  "agent_id": "agent_2",
+  "state": {
+    "version": "1.0.0"
+  }
+}

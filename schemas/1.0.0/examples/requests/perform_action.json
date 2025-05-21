@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "type": "perform_action",
+  "game": "tictactoe",
+  "match_id": "match_123",
+  "agent_id": "agent_1",
+  "action": {
+    "version": "1.0.0",
+    "type": "place_mark",
+    "data": { }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/1.0.0/requests/create_match.json",
+  "title": "Create Match",
+  "type": "object",
+  "required": [
+    "version",
+    "type",
+    "game",
+    "agent_id",
+    "settings"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "type": {
+      "type": "string",
+      "const": "create_match"
+    },
+    "game": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object",
+      "required": [
+        "version",
+        "data"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "data": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

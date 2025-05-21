@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "type": "get_state_response",
+  "game": "tictactoe",
+  "match_id": "match_123",
+  "status": "started",
+  "phase": "phase1",
+  "turn": 3,
+  "stage": "stage1",
+  "state": {
+    "version": "1.0.0",
+    "data": {}
+  },
+  "active_agent_id": "agent_1",
+  "agents": [
+    {
+      "id": "agent_1",
+      "name": "Player 1"
+    },
+    {
+      "id": "agent_2",
+      "name": "Player 2"
+    }
+  ],
+  "winners": [],
+  "started_at": "2025-05-05T10:00:00Z"
+}

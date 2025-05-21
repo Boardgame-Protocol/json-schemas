@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "type": "create_match",
+  "game": "tictactoe",
+  "agent_id": "agent_2",
+  "settings": {
+    "version": "1.0.0",
+    "data": {}
+  }
+}

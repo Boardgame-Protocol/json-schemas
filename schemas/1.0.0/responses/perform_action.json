@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/perform_action.json",
+  "$id": "https://boardgame-protocol.github.io/json-schemas/schemas/1.0.0/responses/perform_action.json",
   "type": "object",
   "required": [
     "version",
@@ -8,7 +8,7 @@
     "game",
     "match_id",
     "agent_id",
-    "action"
+    "action_response"
   ],
   "properties": {
     "version": {
@@ -17,7 +17,7 @@
     },
     "type": {
       "type": "string",
-      "const": "perform_action"
+      "const": "perform_action_response"
     },
     "game": {
       "type": "string"
@@ -28,15 +28,27 @@
     "agent_id": {
       "type": "string"
     },
-    "action": {
+    "action_response": {
       "type": "object",
-      "required": ["version", "type", "data"],
+      "required": [
+        "version",
+        "status",
+        "message",
+        "data"
+      ],
       "properties": {
         "version": {
           "type": "string",
           "pattern": "^\\d+\\.\\d+\\.\\d+$"
         },
-        "type": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "success",
+            "error"
+          ]
+        },
+        "message": {
           "type": "string"
         },
         "data": {

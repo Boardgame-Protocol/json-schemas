@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "type": "get_matches_response",
+  "agent_id": "agent_2",
+  "matches": [
+    {
+      "match_id": "match_123",
+      "agents": [
+        {
+          "id": "agent_2",
+          "name": "Alice"
+        }
+      ],
+      "status": "waiting"
+    },
+    {
+      "match_id": "match_456",
+      "agents": [
+        {
+          "id": "agent_4",
+          "name": "Bob"
+        },
+        {
+          "id": "agent_5",
+          "name": "Charlie"
+        }
+      ],
+      "status": "started"
+    }
+  ]
+}
