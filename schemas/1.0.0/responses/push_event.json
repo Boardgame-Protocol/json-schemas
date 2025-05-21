@@ -6,7 +6,7 @@
     "version",
     "game",
     "match_id",
-    "phase",
+    "agent_id",
     "turn",
     "stage",
     "state",
@@ -25,14 +25,7 @@
     "match_id": {
       "type": "string"
     },
-    "phase": {
-      "type": "string"
-    },
-    "turn": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "stage": {
+    "agent_id": {
       "type": "string"
     },
     "event": {
